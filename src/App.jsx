@@ -1,32 +1,31 @@
+import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import TaskGrid from "./components/TaskGrid";
+import ImageSection from "./components/ImageSection";
+import Footer from "./components/Footer";
+import TaskDetail from "./components/TaskDetail";
 import "./App.css";
 
 export default function App() {
   return (
     <div className="container">
-      <header className="header">
-        <h1>TaskManager</h1>
-        <p>Simple Responsive Static Layout</p>
-      </header>
+      <Header />
 
-      <section className="task-grid">
-        <div className="card">Design UI</div>
-        <div className="card">Build Components</div>
-        <div className="card">Connect Backend</div>
-        <div className="card">Deploy Project</div>
-        <div className="card">Fix Bugs</div>
-        <div className="card">Optimize Performance</div>
-      </section>
-
-      <section className="image-section">
-        <img
-          src="https://picsum.photos/1000/400"
-          alt="Demo"
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <TaskGrid />
+              <ImageSection />
+            </>
+          }
         />
-      </section>
 
-      <footer className="footer">
-        © 2026 TaskManager App
-      </footer>
+        <Route path="/task/:title" element={<TaskDetail />} />
+      </Routes>
+
+      <Footer />
     </div>
   );
 }

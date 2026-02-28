@@ -56,6 +56,41 @@
   color: #888;
 }
 
+
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.task-detail {
+  margin: 40px 0;
+}
+
+.comment-box {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea {
+  padding: 10px;
+  min-height: 80px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.comment {
+  background: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+
+
+
 /* ---------------- */
 /* RESPONSIVE PART  */
 /* ---------------- */
